@@ -19,15 +19,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          "min-h-screen w-full bg-white text-black flex",
-          inter.className
-        )}
-      >
-        <Sidebar />
-        <div className="p-8 w-full">{children}</div>
-      </body>
+      <ThemeProvider>
+        <body
+          className={cn(
+            "min-h-screen w-full bg-white text-black flex",
+            inter.className
+          )}
+        >
+          <Sidebar />
+          <div className="p-8 w-full">{children}</div>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
